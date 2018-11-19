@@ -18,4 +18,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', FavoritesListView.as_view(), name='favorites-list'),
 ]
