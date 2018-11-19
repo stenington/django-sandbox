@@ -19,5 +19,5 @@ from favorites.views import FavoritesView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('favorites', FavoritesView.as_view(), name='favorites'),
+    path('', FavoritesView.as_view(), name='favorites'),
 ]
