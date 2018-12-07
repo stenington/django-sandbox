@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from favorites.views import FavoritesView
+from favorites.views import FavoritesView, NewFavoriteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', FavoritesView.as_view(), name='favorites'),
+    path('new/', NewFavoriteView.as_view(), name='new_favorite'),
 ]
