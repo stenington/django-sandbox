@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from .models import Favorite
 from django.views.generic.edit import CreateView
-from .forms import NewFavoriteForm
 
 class FavoritesView(ListView):
     model = Favorite
@@ -14,6 +13,6 @@ class NewFavoriteView(CreateView):
     model = Favorite
     fields = ['name']
     template_name = "favorites/new-favorite.html"
-    success_url = '../'
+    success_url = '/'
 
 new_favorite = NewFavoriteView.as_view()
