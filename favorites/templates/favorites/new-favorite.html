@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add New Favorite</title>
+    </head>
+    <body>
+        <h4>Add a new favorite:</h4>
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Add">
+        </form>
+    </body>
+</html>
